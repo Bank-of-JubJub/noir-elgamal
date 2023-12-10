@@ -194,7 +194,7 @@ pub fn exp_elgamal_encrypt_packed(packed_public_key: [u8; 32], plaintext: u40, r
 
 /// translated from here: https://github.com/iden3/ffjavascript/blob/d1cd4ae32170aedd000865f0828b78a15df6f06f/src/scalar.js#L215
 /// and inspired by this: https://gist.github.com/signorecello/dad41f8b90ae48c7355bfd1f34f8885b
-fn from_rpr_le(public_key: [u8;32]) -> Field {
+pub fn from_rpr_le(public_key: [u8;32]) -> Field {
   let mut y : Field = 0;
   let mut v : Field = 1;
   for i in 0..32 {
